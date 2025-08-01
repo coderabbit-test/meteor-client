@@ -5,6 +5,9 @@
 
 package meteordevelopment.meteorclient.mixininterface;
 
-public interface IHorseBaseEntity {
-    void meteor$setSaddled(boolean saddled);
+import com.mojang.blaze3d.textures.AddressMode;
+
+public interface IGpuTexture {
+    AddressMode  meteor$getAddressModeU();
+    AddressMode  meteor$getAddressModeV();
 }
