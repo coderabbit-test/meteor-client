@@ -272,9 +272,9 @@ public class Nuker extends Module {
 
         if (listMode.get() == ListMode.AutoSelect) {
             HitResult hitResult = mc.crosshairTarget;
-            if (hitResult != null && hitResult.getType() == HitResult.Type.BLOCK) {
-                BlockPos pos = ((BlockHitResult) hitResult).getBlockPos();
-                autoSelectBlock = mc.world.getBlockState(pos).getBlock();
+if (hitResult != null && hitResult.getType() == HitResult.Type.BLOCK && mc.world != null) {
+    BlockPos pos = ((BlockHitResult) hitResult).getBlockPos();
+    autoSelectBlock = mc.world.getBlockState(pos).getBlock();
             } else {
                 autoSelectBlock = null;
                 warning("No block is being targeted for auto-select mode.");
